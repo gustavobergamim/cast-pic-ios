@@ -25,7 +25,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="PRÓXIMO"/>
                                 <connections>
-                                    <segue destination="j1I-3p-ASd" kind="show" id="zxq-It-E78"/>
+                                    <segue destination="j1I-3p-ASd" kind="show" identifier="segueProximo" id="zxq-It-E78"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctJ-r1-JI5">
+                                <rect key="frame" x="111" y="459" width="193" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ABAIXO"/>
+                                <connections>
+                                    <segue destination="NTu-lK-WQU" kind="show" identifier="segueAbaixo" id="NIh-jc-eHM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,6 +47,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="443.47826086956525" y="132.88043478260872"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wif-QV-6iJ">
+            <objects>
+                <viewController id="NTu-lK-WQU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="quY-SP-6qb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="jL4-da-W4p"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OF3-ol-m1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="835"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z1z-HS-1hs">
