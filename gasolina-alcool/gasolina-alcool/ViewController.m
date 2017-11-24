@@ -47,6 +47,8 @@
 
 - (IBAction) calcular:(UIButton*)sender
 {
+    //NSString *stringComReplace = [self.textAlcool.text stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    
     NSNumber *alcoolNumber = [[NSNumberFormatter new] numberFromString: self.textAlcool.text];
     double valorAlcool = alcoolNumber.doubleValue;
     
