@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		094515351FD87DEB003AA42A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515261FD87DEB003AA42A /* main.m */; };
+		094515361FD87DEB003AA42A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515271FD87DEB003AA42A /* AppDelegate.m */; };
+		094515371FD87DEB003AA42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094515291FD87DEB003AA42A /* Assets.xcassets */; };
+		094515381FD87DEB003AA42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0945152B1FD87DEB003AA42A /* LaunchScreen.storyboard */; };
+		094515391FD87DEB003AA42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0945152D1FD87DEB003AA42A /* Main.storyboard */; };
+		0945153A1FD87DEB003AA42A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515301FD87DEB003AA42A /* ViewController.m */; };
+		0945153B1FD87DEB003AA42A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 094515331FD87DEB003AA42A /* Info.plist */; };
+		0945153E1FD880BE003AA42A /* CGEstado.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945153D1FD880BE003AA42A /* CGEstado.m */; };
+		094515411FD8831E003AA42A /* CGServiceEstado.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515401FD8831E003AA42A /* CGServiceEstado.m */; };
+		094515441FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515431FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m */; };
+		094515471FD89143003AA42A /* CGCelulaEstadoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 094515461FD89143003AA42A /* CGCelulaEstadoTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		094515091FD87B15003AA42A /* estados-do-brasil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "estados-do-brasil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		094515251FD87DEB003AA42A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		094515261FD87DEB003AA42A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		094515271FD87DEB003AA42A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		094515291FD87DEB003AA42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0945152C1FD87DEB003AA42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0945152E1FD87DEB003AA42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		094515301FD87DEB003AA42A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		094515311FD87DEB003AA42A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		094515331FD87DEB003AA42A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0945153C1FD880BE003AA42A /* CGEstado.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGEstado.h; sourceTree = "<group>"; };
+		0945153D1FD880BE003AA42A /* CGEstado.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGEstado.m; sourceTree = "<group>"; };
+		0945153F1FD8831E003AA42A /* CGServiceEstado.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGServiceEstado.h; sourceTree = "<group>"; };
+		094515401FD8831E003AA42A /* CGServiceEstado.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGServiceEstado.m; sourceTree = "<group>"; };
+		094515421FD88E13003AA42A /* CGListaEstadoControllerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGListaEstadoControllerTableViewController.h; sourceTree = "<group>"; };
+		094515431FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGListaEstadoControllerTableViewController.m; sourceTree = "<group>"; };
+		094515451FD89143003AA42A /* CGCelulaEstadoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGCelulaEstadoTableViewCell.h; sourceTree = "<group>"; };
+		094515461FD89143003AA42A /* CGCelulaEstadoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGCelulaEstadoTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		094515061FD87B15003AA42A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094515001FD87B15003AA42A = {
+			isa = PBXGroup;
+			children = (
+				0945150B1FD87B15003AA42A /* estados-do-brasil */,
+				0945150A1FD87B15003AA42A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0945150A1FD87B15003AA42A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				094515091FD87B15003AA42A /* estados-do-brasil.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0945150B1FD87B15003AA42A /* estados-do-brasil */ = {
+			isa = PBXGroup;
+			children = (
+				094515321FD87DEB003AA42A /* Config */,
+				0945152F1FD87DEB003AA42A /* Controllers */,
+				094515241FD87DEB003AA42A /* Misc */,
+				094515341FD87DEB003AA42A /* Models */,
+				094515231FD87DEB003AA42A /* Resources */,
+				094515221FD87DEB003AA42A /* Services */,
+				0945152A1FD87DEB003AA42A /* UserInterface */,
+				094515281FD87DEB003AA42A /* xcassets */,
+			);
+			path = "estados-do-brasil";
+			sourceTree = "<group>";
+		};
+		094515221FD87DEB003AA42A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0945153F1FD8831E003AA42A /* CGServiceEstado.h */,
+				094515401FD8831E003AA42A /* CGServiceEstado.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		094515231FD87DEB003AA42A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		094515241FD87DEB003AA42A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				094515251FD87DEB003AA42A /* AppDelegate.h */,
+				094515261FD87DEB003AA42A /* main.m */,
+				094515271FD87DEB003AA42A /* AppDelegate.m */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		094515281FD87DEB003AA42A /* xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				094515291FD87DEB003AA42A /* Assets.xcassets */,
+			);
+			path = xcassets;
+			sourceTree = "<group>";
+		};
+		0945152A1FD87DEB003AA42A /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				0945152B1FD87DEB003AA42A /* LaunchScreen.storyboard */,
+				0945152D1FD87DEB003AA42A /* Main.storyboard */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		0945152F1FD87DEB003AA42A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				094515301FD87DEB003AA42A /* ViewController.m */,
+				094515311FD87DEB003AA42A /* ViewController.h */,
+				094515421FD88E13003AA42A /* CGListaEstadoControllerTableViewController.h */,
+				094515431FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m */,
+				094515451FD89143003AA42A /* CGCelulaEstadoTableViewCell.h */,
+				094515461FD89143003AA42A /* CGCelulaEstadoTableViewCell.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		094515321FD87DEB003AA42A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				094515331FD87DEB003AA42A /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		094515341FD87DEB003AA42A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0945153C1FD880BE003AA42A /* CGEstado.h */,
+				0945153D1FD880BE003AA42A /* CGEstado.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		094515081FD87B15003AA42A /* estados-do-brasil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0945151F1FD87B16003AA42A /* Build configuration list for PBXNativeTarget "estados-do-brasil" */;
+			buildPhases = (
+				094515051FD87B15003AA42A /* Sources */,
+				094515061FD87B15003AA42A /* Frameworks */,
+				094515071FD87B15003AA42A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "estados-do-brasil";
+			productName = "estados-do-brasil";
+			productReference = 094515091FD87B15003AA42A /* estados-do-brasil.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		094515011FD87B15003AA42A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CG;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Cast Group";
+				TargetAttributes = {
+					094515081FD87B15003AA42A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 094515041FD87B15003AA42A /* Build configuration list for PBXProject "estados-do-brasil" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 094515001FD87B15003AA42A;
+			productRefGroup = 0945150A1FD87B15003AA42A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				094515081FD87B15003AA42A /* estados-do-brasil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		094515071FD87B15003AA42A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0945153B1FD87DEB003AA42A /* Info.plist in Resources */,
+				094515391FD87DEB003AA42A /* Main.storyboard in Resources */,
+				094515371FD87DEB003AA42A /* Assets.xcassets in Resources */,
+				094515381FD87DEB003AA42A /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		094515051FD87B15003AA42A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094515411FD8831E003AA42A /* CGServiceEstado.m in Sources */,
+				0945153A1FD87DEB003AA42A /* ViewController.m in Sources */,
+				094515471FD89143003AA42A /* CGCelulaEstadoTableViewCell.m in Sources */,
+				094515361FD87DEB003AA42A /* AppDelegate.m in Sources */,
+				094515351FD87DEB003AA42A /* main.m in Sources */,
+				0945153E1FD880BE003AA42A /* CGEstado.m in Sources */,
+				094515441FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0945152B1FD87DEB003AA42A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0945152C1FD87DEB003AA42A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0945152D1FD87DEB003AA42A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0945152E1FD87DEB003AA42A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0945151D1FD87B16003AA42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0945151E1FD87B16003AA42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		094515201FD87B16003AA42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG29GXQGG3;
+				INFOPLIST_FILE = "$(SRCROOT)/estados-do-brasil/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.castgroup.estados-do-brasil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		094515211FD87B16003AA42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG29GXQGG3;
+				INFOPLIST_FILE = "$(SRCROOT)/estados-do-brasil/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.castgroup.estados-do-brasil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		094515041FD87B15003AA42A /* Build configuration list for PBXProject "estados-do-brasil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0945151D1FD87B16003AA42A /* Debug */,
+				0945151E1FD87B16003AA42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0945151F1FD87B16003AA42A /* Build configuration list for PBXNativeTarget "estados-do-brasil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				094515201FD87B16003AA42A /* Debug */,
+				094515211FD87B16003AA42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 094515011FD87B15003AA42A /* Project object */;
+}
