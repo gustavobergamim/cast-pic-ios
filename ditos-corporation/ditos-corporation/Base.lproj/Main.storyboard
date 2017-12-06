@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cyA-OE-UlM">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-BoldOblique</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5kQ-ox-7iz">
+            <objects>
+                <viewController id="cyA-OE-UlM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zyz-BM-p5z">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ijw-Vf-4qa">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1346"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcd-GS-gJw">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="442"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DITOs CORP" textAlignment="right" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-MI-Qd4">
+                                                <rect key="frame" x="172" y="27" width="129" height="93"/>
+                                                <fontDescription key="fontDescription" name="Courier-BoldOblique" family="Courier" pointSize="90"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" misplaced="YES" image="eservices-careers" translatesAutoresizingMaskIntoConstraints="NO" id="mOo-yT-Pdg">
+                                                <rect key="frame" x="8" y="16" width="134" height="115"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="mfs-MI-Qd4" secondAttribute="bottom" constant="27" id="5Cd-df-u12"/>
+                                            <constraint firstAttribute="trailing" secondItem="mfs-MI-Qd4" secondAttribute="trailing" constant="19" id="N8n-bQ-b34"/>
+                                            <constraint firstItem="mfs-MI-Qd4" firstAttribute="leading" secondItem="mOo-yT-Pdg" secondAttribute="trailing" constant="8" id="XbC-4l-UYd"/>
+                                            <constraint firstItem="mfs-MI-Qd4" firstAttribute="top" secondItem="kcd-GS-gJw" secondAttribute="top" constant="27" id="c3V-bq-m6C"/>
+                                            <constraint firstItem="mOo-yT-Pdg" firstAttribute="top" secondItem="kcd-GS-gJw" secondAttribute="top" constant="16" id="mB5-uq-kRT"/>
+                                            <constraint firstAttribute="bottom" secondItem="mOo-yT-Pdg" secondAttribute="bottom" constant="16" id="vAB-v8-m7Z"/>
+                                            <constraint firstItem="mOo-yT-Pdg" firstAttribute="leading" secondItem="kcd-GS-gJw" secondAttribute="leading" constant="8" id="xDU-m6-WMT"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8BR-4m-Jde">
+                                        <rect key="frame" x="0.0" y="452" width="1024" height="442"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_servico" translatesAutoresizingMaskIntoConstraints="NO" id="Ivv-Ti-420">
+                                                <rect key="frame" x="0.0" y="0.0" width="504.5" height="442"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_contato" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-oR-lYS">
+                                                <rect key="frame" x="519.5" y="0.0" width="504.5" height="442"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Yq-KZ-0Bg">
+                                        <rect key="frame" x="0.0" y="904" width="1024" height="442"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_cliente" translatesAutoresizingMaskIntoConstraints="NO" id="kpq-NN-Uwh">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="442"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_empresa" translatesAutoresizingMaskIntoConstraints="NO" id="hxc-Rm-6SP">
+                                                <rect key="frame" x="517" y="0.0" width="507" height="442"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ijw-Vf-4qa" firstAttribute="top" secondItem="gsR-cv-0sZ" secondAttribute="top" id="TaO-uu-SgE"/>
+                            <constraint firstItem="gsR-cv-0sZ" firstAttribute="bottom" secondItem="Ijw-Vf-4qa" secondAttribute="bottom" id="suy-uv-j4h"/>
+                            <constraint firstItem="Ijw-Vf-4qa" firstAttribute="leading" secondItem="gsR-cv-0sZ" secondAttribute="leading" id="tRf-sL-VoZ"/>
+                            <constraint firstItem="gsR-cv-0sZ" firstAttribute="trailing" secondItem="Ijw-Vf-4qa" secondAttribute="trailing" id="tem-Pd-eH7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gsR-cv-0sZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQ8-zw-YqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770.625" y="131.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eservices-careers" width="200" height="160"/>
+        <image name="menu_cliente" width="115" height="121"/>
+        <image name="menu_contato" width="115" height="121"/>
+        <image name="menu_empresa" width="115" height="121"/>
+        <image name="menu_servico" width="115" height="121"/>
+    </resources>
+</document>
