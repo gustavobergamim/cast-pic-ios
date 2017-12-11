@@ -24,4 +24,9 @@ typedef NS_ENUM(NSUInteger, CGEnumRegiao)
 @property (nonatomic, strong) NSString *sigla;
 @property (nonatomic, assign) CGEnumRegiao regiao;
 
++ (NSString *)obterNomeRegiao:(CGEnumRegiao)enumRegiao;
+
+- (NSString *)obterNomeRegiao;
+- (NSString *)obterNomeImagemBandeira;
+
 @end

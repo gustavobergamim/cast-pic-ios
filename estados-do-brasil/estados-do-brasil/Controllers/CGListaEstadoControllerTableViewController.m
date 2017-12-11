@@ -7,12 +7,14 @@
 //
 
 #import "CGListaEstadoControllerTableViewController.h"
+#import "CGCelulaEstadoTableViewCell.h"
 #import "CGServiceEstado.h"
 #import "CGEstado.h"
 
 @interface CGListaEstadoControllerTableViewController ()
 
 @property (nonatomic, strong) NSArray *listaEstados;
+@property (nonatomic, strong) NSDictionary *listaEstadosPorRegiao;
 
 @end
 
@@ -20,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.listaEstados = [[CGServiceEstado new] recuperarEstados];
+    CGServiceEstado *service = [CGServiceEstado new];
+    self.listaEstados = [service recuperarEstados];
+    self.listaEstadosPorRegiao = [service recuperarEstadosPorRegiao];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,26 +34,45 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.listaEstadosPorRegiao.allKeys.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.listaEstados.count;
+    NSArray *listaEstadosRegiao = [self.listaEstadosPorRegiao objectForKey:@(section)];
+    return listaEstadosRegiao.count;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [CGEstado obterNomeRegiao:section];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEstado" forIndexPath:indexPath];
-    
-    CGEstado *estado = self.listaEstados[indexPath.row];
-    
-    //cell.textLabel.text = estado.nome;
-    
-    
-    
+    CGCelulaEstadoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellEstado" forIndexPath:indexPath];
+    NSArray *listaEstadosRegiao = [self.listaEstadosPorRegiao objectForKey:@(indexPath.section)];
+    CGEstado *estado = listaEstadosRegiao[indexPath.row];
+    [cell preencher:estado];
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGEstado *estado = [self.listaEstadosPorRegiao objectForKey:@(indexPath.section)][indexPath.row];
+    
+    NSString *mensagem = [NSString stringWithFormat:@"O Estado que você selecionou foi %@, da região %@.", [estado nome], [estado obterNomeRegiao]];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Estado Selecionado" message:mensagem preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:actionOk];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -13,4 +13,6 @@
 
 - (NSArray<CGEstado*>*) recuperarEstados;
 
+- (NSDictionary<NSNumber*, NSArray<CGEstado*>*>*) recuperarEstadosPorRegiao;
+
 @end

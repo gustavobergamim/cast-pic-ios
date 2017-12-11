@@ -129,12 +129,11 @@
 		0945152F1FD87DEB003AA42A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				09B4F7A71FDF13A200FECB12 /* Cell */,
 				094515301FD87DEB003AA42A /* ViewController.m */,
 				094515311FD87DEB003AA42A /* ViewController.h */,
 				094515421FD88E13003AA42A /* CGListaEstadoControllerTableViewController.h */,
 				094515431FD88E13003AA42A /* CGListaEstadoControllerTableViewController.m */,
-				094515451FD89143003AA42A /* CGCelulaEstadoTableViewCell.h */,
-				094515461FD89143003AA42A /* CGCelulaEstadoTableViewCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +153,15 @@
 				0945153D1FD880BE003AA42A /* CGEstado.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		09B4F7A71FDF13A200FECB12 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				094515451FD89143003AA42A /* CGCelulaEstadoTableViewCell.h */,
+				094515461FD89143003AA42A /* CGCelulaEstadoTableViewCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG29GXQGG3;
 				INFOPLIST_FILE = "$(SRCROOT)/estados-do-brasil/Config/Info.plist";
@@ -376,6 +385,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.castgroup.estados-do-brasil";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG29GXQGG3;
 				INFOPLIST_FILE = "$(SRCROOT)/estados-do-brasil/Config/Info.plist";
@@ -391,6 +402,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.castgroup.estados-do-brasil";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

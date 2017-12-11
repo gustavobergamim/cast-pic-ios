@@ -206,4 +206,24 @@
     return arrayEstados;
 }
 
+- (NSDictionary<NSNumber *,NSArray<CGEstado *> *> *)recuperarEstadosPorRegiao
+{
+    NSArray *listaEstados = [self recuperarEstados];
+    NSMutableDictionary *resultado = [@{} mutableCopy];
+    
+    for (CGEstado *estado in listaEstados)
+    {
+        NSMutableArray *listaEstadosRegiao = [resultado objectForKey:@(estado.regiao)];
+        
+        if (listaEstadosRegiao == nil)
+        {
+            listaEstadosRegiao = [@[] mutableCopy];
+            [resultado setObject:listaEstadosRegiao forKey:@(estado.regiao)];
+        }
+        
+        [listaEstadosRegiao addObject:estado];
+    }
+    return resultado;
+}
+
 @end
