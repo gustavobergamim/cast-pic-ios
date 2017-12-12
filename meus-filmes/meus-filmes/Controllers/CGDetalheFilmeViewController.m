@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.imagem.image = [UIImage imageNamed:[self.filme obterNomeImagem]];
     self.labelNome.text = self.filme.nome;
-    self.labelDescricao.text = self.filme.descricao;
+    self.textDescricao.text = self.filme.descricao;
 }
 
 - (void)didReceiveMemoryWarning {

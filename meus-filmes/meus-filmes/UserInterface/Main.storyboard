@@ -184,6 +184,7 @@
                     <connections>
                         <outlet property="imagem" destination="29b-GN-jJb" id="GP0-Zd-bge"/>
                         <outlet property="labelNome" destination="mVF-mL-3A6" id="iO6-FG-8so"/>
+                        <outlet property="textDescricao" destination="oqz-tx-WdO" id="oqj-dp-RFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVg-VI-lQh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,7 +12,7 @@
 @interface CGDetalheFilmeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imagem;
 @property (weak, nonatomic) IBOutlet UILabel *labelNome;
-@property (weak, nonatomic) IBOutlet UILabel *labelDescricao;
+@property (weak, nonatomic) IBOutlet UITextView *textDescricao;
 
 @property(nonatomic, strong) CGFilme *filme;
 
