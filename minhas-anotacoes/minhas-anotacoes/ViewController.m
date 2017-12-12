@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *textAnotacoes;
+
 @end
 
 @implementation ViewController
@@ -28,6 +30,11 @@ static NSString *keyMinhasAnotacoes = @"minhas-anotacoes";
 
 - (IBAction)salvar:(UIButton *)sender {
     [[NSUserDefaults standardUserDefaults] setObject:self.textAnotacoes.text forKey:keyMinhasAnotacoes];
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.textAnotacoes resignFirstResponder];
 }
 
 @end
