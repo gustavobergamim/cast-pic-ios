@@ -30,6 +30,14 @@ static NSString *keyMinhasAnotacoes = @"minhas-anotacoes";
 
 - (IBAction)salvar:(UIButton *)sender {
     [[NSUserDefaults standardUserDefaults] setObject:self.textAnotacoes.text forKey:keyMinhasAnotacoes];
+    [self exibirMensagem:@"Anotações salvas com sucesso."];
+}
+
+- (void)exibirMensagem:(NSString *)mensagem {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Minhas Anotações" message:mensagem preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:actionOk];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
