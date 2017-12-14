@@ -7,7 +7,10 @@
 //
 
 #import "CGListaTarefasTableViewController.h"
-#import "CGTarefaService.h"
+#import "CGTarefaServiceArchiver.h"
+#import "CGTarefa.h"
+#import "CGTarefaTableViewCell.h"
+
 
 @interface CGListaTarefasTableViewController ()
 
@@ -44,7 +47,7 @@
 
 - (void) atualizarLista:(BOOL)reloadData
 {
-    CGTarefaService *service = [CGTarefaService new];
+    CGTarefaServiceArchiver *service = [CGTarefaServiceArchiver new];
     self.listaTarefas = [service recuperarTarefas];
     if (!reloadData) return;
     [self.tableView reloadData];
@@ -64,10 +67,10 @@
 
 - (void) removerTarefas:(NSArray<NSIndexPath*>*)selectedIndexes reloadData:(BOOL)reloadData
 {
-    CGTarefaService *service = [CGTarefaService new];
+    CGTarefaServiceArchiver *service = [CGTarefaServiceArchiver new];
     for (NSIndexPath *indexPath in selectedIndexes)
     {
-        NSString *tarefa = [self.listaTarefas objectAtIndex:indexPath.row];
+        CGTarefa *tarefa = [self.listaTarefas objectAtIndex:indexPath.row];
         [service removerTarefa:tarefa];
     }
     [self atualizarLista:reloadData];
@@ -89,13 +92,9 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTarefa" forIndexPath:indexPath];
-    
-    NSString *tarefa = [self.listaTarefas objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = tarefa;
-    cell.detailTextLabel.text = @"Berga";
-    
+    CGTarefaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTarefa" forIndexPath:indexPath];
+    CGTarefa *tarefa = [self.listaTarefas objectAtIndex:indexPath.row];
+    [cell preencher:tarefa];
     return cell;
 }
 

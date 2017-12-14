@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Minhas tarefas atuais!"; ObjectID = "2c6-Lb-1Yh"; */
+"2c6-Lb-1Yh.text" = "Minhas tarefas atuais!";
+
+/* Class = "UILabel"; text = "Informe a tarefa:"; ObjectID = "33f-8Q-Wui"; */
+"33f-8Q-Wui.text" = "Informe a tarefa:";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "7x7-Aq-bLC"; */
+"7x7-Aq-bLC.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "Adicionar"; ObjectID = "Cme-zE-c3m"; */
+"Cme-zE-c3m.normalTitle" = "Adicionar";
+
+/* Class = "UINavigationItem"; title = "Lista de Tarefas"; ObjectID = "yAX-4h-1mH"; */
+"yAX-4h-1mH.title" = "Lista de Tarefas";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "z6q-2d-isf"; */
+"z6q-2d-isf.text" = "Title";

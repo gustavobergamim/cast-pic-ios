@@ -7,7 +7,8 @@
 //
 
 #import "CGNovaTarefaViewController.h"
-#import "CGTarefaService.h"
+#import "CGTarefaServiceArchiver.h"
+#import "CGTarefa.h"
 
 @interface CGNovaTarefaViewController ()
 
@@ -32,8 +33,10 @@
 }
 
 - (IBAction) adicionarTarefa:(UIButton *)sender {
-    CGTarefaService *service = [CGTarefaService new];
-    [service adicionarTarefa:self.txtTarefa.text];
+    CGTarefaServiceArchiver *service = [CGTarefaServiceArchiver new];
+    CGTarefa *tarefa = [CGTarefa new];
+    [tarefa setNome:self.txtTarefa.text];
+    [service adicionarTarefa:tarefa];
     [self exibirMensagem:@"Tarefa adicionada com sucesso." fecharView:YES];
 }
 
