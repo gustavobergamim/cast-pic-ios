@@ -13,6 +13,12 @@
 		098349351FE1BB6300D60797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098349341FE1BB6300D60797 /* Assets.xcassets */; };
 		098349381FE1BB6300D60797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098349361FE1BB6300D60797 /* LaunchScreen.storyboard */; };
 		0983493B1FE1BB6300D60797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0983493A1FE1BB6300D60797 /* main.m */; };
+		098938E91FE8643600C737CD /* minhas_notas_diarias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 098938E71FE8643600C737CD /* minhas_notas_diarias.xcdatamodeld */; };
+		098938F71FE8652200C737CD /* CGNotaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 098938F61FE8652200C737CD /* CGNotaTableViewCell.m */; };
+		098938FA1FE8653700C737CD /* CGListaNotasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098938F91FE8653700C737CD /* CGListaNotasTableViewController.m */; };
+		098938FD1FE8654E00C737CD /* CGNotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098938FC1FE8654E00C737CD /* CGNotaViewController.m */; };
+		098939001FE866AB00C737CD /* NSDate+CGDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 098938FF1FE866AB00C737CD /* NSDate+CGDate.m */; };
+		098939041FE8691200C737CD /* CGNotaService.m in Sources */ = {isa = PBXBuildFile; fileRef = 098939031FE8691200C737CD /* CGNotaService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,17 @@
 		098349371FE1BB6300D60797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098349391FE1BB6300D60797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0983493A1FE1BB6300D60797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		098938E81FE8643600C737CD /* minhas_notas_diarias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = minhas_notas_diarias.xcdatamodel; sourceTree = "<group>"; };
+		098938F51FE8652200C737CD /* CGNotaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGNotaTableViewCell.h; sourceTree = "<group>"; };
+		098938F61FE8652200C737CD /* CGNotaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGNotaTableViewCell.m; sourceTree = "<group>"; };
+		098938F81FE8653700C737CD /* CGListaNotasTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGListaNotasTableViewController.h; sourceTree = "<group>"; };
+		098938F91FE8653700C737CD /* CGListaNotasTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGListaNotasTableViewController.m; sourceTree = "<group>"; };
+		098938FB1FE8654E00C737CD /* CGNotaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGNotaViewController.h; sourceTree = "<group>"; };
+		098938FC1FE8654E00C737CD /* CGNotaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGNotaViewController.m; sourceTree = "<group>"; };
+		098938FE1FE866AB00C737CD /* NSDate+CGDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGDate.h"; sourceTree = "<group>"; };
+		098938FF1FE866AB00C737CD /* NSDate+CGDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGDate.m"; sourceTree = "<group>"; };
+		098939021FE8691200C737CD /* CGNotaService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGNotaService.h; sourceTree = "<group>"; };
+		098939031FE8691200C737CD /* CGNotaService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGNotaService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,10 @@
 		0983492A1FE1BB6300D60797 /* minhas-notas-diarias */ = {
 			isa = PBXGroup;
 			children = (
+				098939011FE8690200C737CD /* Service */,
+				098938FE1FE866AB00C737CD /* NSDate+CGDate.h */,
+				098938FF1FE866AB00C737CD /* NSDate+CGDate.m */,
+				098938EA1FE864F600C737CD /* Controller */,
 				0983492B1FE1BB6300D60797 /* AppDelegate.h */,
 				0983492C1FE1BB6300D60797 /* AppDelegate.m */,
 				0983492E1FE1BB6300D60797 /* ViewController.h */,
@@ -67,8 +88,39 @@
 				098349361FE1BB6300D60797 /* LaunchScreen.storyboard */,
 				098349391FE1BB6300D60797 /* Info.plist */,
 				0983493A1FE1BB6300D60797 /* main.m */,
+				098938E71FE8643600C737CD /* minhas_notas_diarias.xcdatamodeld */,
 			);
 			path = "minhas-notas-diarias";
+			sourceTree = "<group>";
+		};
+		098938EA1FE864F600C737CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				098938ED1FE864F600C737CD /* Cell */,
+				098938F81FE8653700C737CD /* CGListaNotasTableViewController.h */,
+				098938F91FE8653700C737CD /* CGListaNotasTableViewController.m */,
+				098938FB1FE8654E00C737CD /* CGNotaViewController.h */,
+				098938FC1FE8654E00C737CD /* CGNotaViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		098938ED1FE864F600C737CD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				098938F51FE8652200C737CD /* CGNotaTableViewCell.h */,
+				098938F61FE8652200C737CD /* CGNotaTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		098939011FE8690200C737CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				098939021FE8691200C737CD /* CGNotaService.h */,
+				098939031FE8691200C737CD /* CGNotaService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				098349301FE1BB6300D60797 /* ViewController.m in Sources */,
+				098938FA1FE8653700C737CD /* CGListaNotasTableViewController.m in Sources */,
 				0983493B1FE1BB6300D60797 /* main.m in Sources */,
 				0983492D1FE1BB6300D60797 /* AppDelegate.m in Sources */,
+				098939001FE866AB00C737CD /* NSDate+CGDate.m in Sources */,
+				098938F71FE8652200C737CD /* CGNotaTableViewCell.m in Sources */,
+				098938FD1FE8654E00C737CD /* CGNotaViewController.m in Sources */,
+				098938E91FE8643600C737CD /* minhas_notas_diarias.xcdatamodeld in Sources */,
+				098939041FE8691200C737CD /* CGNotaService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +383,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		098938E71FE8643600C737CD /* minhas_notas_diarias.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				098938E81FE8643600C737CD /* minhas_notas_diarias.xcdatamodel */,
+			);
+			currentVersion = 098938E81FE8643600C737CD /* minhas_notas_diarias.xcdatamodel */;
+			path = minhas_notas_diarias.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 098349201FE1BB6300D60797 /* Project object */;
 }

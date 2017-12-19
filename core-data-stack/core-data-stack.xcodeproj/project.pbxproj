@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0981E7D01FE460E300128804 /* NSDate+CGDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0981E7CF1FE460E300128804 /* NSDate+CGDate.m */; };
 		09AFE6931FE315FD001CBCA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AFE6921FE315FD001CBCA3 /* AppDelegate.m */; };
 		09AFE6961FE315FD001CBCA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09AFE6951FE315FD001CBCA3 /* ViewController.m */; };
 		09AFE6991FE315FD001CBCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09AFE6971FE315FD001CBCA3 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0981E7CE1FE460E300128804 /* NSDate+CGDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CGDate.h"; sourceTree = "<group>"; };
+		0981E7CF1FE460E300128804 /* NSDate+CGDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGDate.m"; sourceTree = "<group>"; };
 		09AFE68E1FE315FD001CBCA3 /* core-data-stack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "core-data-stack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09AFE6911FE315FD001CBCA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09AFE6921FE315FD001CBCA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				09AFE6A21FE315FD001CBCA3 /* Info.plist */,
 				09AFE6A31FE315FD001CBCA3 /* main.m */,
 				09AFE69A1FE315FD001CBCA3 /* core_data_stack.xcdatamodeld */,
+				0981E7CE1FE460E300128804 /* NSDate+CGDate.h */,
+				0981E7CF1FE460E300128804 /* NSDate+CGDate.m */,
 			);
 			path = "core-data-stack";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				09AFE6961FE315FD001CBCA3 /* ViewController.m in Sources */,
 				09AFE69C1FE315FD001CBCA3 /* core_data_stack.xcdatamodeld in Sources */,
 				09AFE6A41FE315FD001CBCA3 /* main.m in Sources */,
+				0981E7D01FE460E300128804 /* NSDate+CGDate.m in Sources */,
 				09AFE6931FE315FD001CBCA3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
