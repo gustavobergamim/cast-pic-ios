@@ -26,6 +26,10 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
+    
+    UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(inserirMarcacao:)];
+    [gesture setMinimumPressDuration:1];
+    [self.mapa addGestureRecognizer:gesture];
 }
 
 - (void) didReceiveMemoryWarning
@@ -56,5 +60,17 @@
     
 }
 
+- (void) inserirMarcacao:(UILongPressGestureRecognizer*)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan)
+    {
+        CGPoint pontoSelecionado = [gesture locationInView:self.mapa];
+        CLLocationCoordinate2D coordenadas = [self.mapa convertPoint:pontoSelecionado toCoordinateFromView:self.mapa];
+        MKPointAnnotation *marcacao = [MKPointAnnotation new];
+        marcacao.coordinate = coordenadas;
+        marcacao.title = @"PIC iOS Mapas";
+        [self.mapa addAnnotation:marcacao];
+    }
+}
 
 @end
