@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TnG-6O-ejb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gia-AI-WQ9">
+            <objects>
+                <viewController id="TnG-6O-ejb" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vxs-yO-CKL"/>
+                        <viewControllerLayoutGuide type="bottom" id="sGD-8z-1Ku"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sXY-Ej-NlK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5dH-gw-Gr8">
+                                <rect key="frame" x="27" y="148.5" width="320" height="370"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-MM-iYn">
+                                        <rect key="frame" x="110" y="0.0" width="100" height="122"/>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGY-LW-7zD">
+                                        <rect key="frame" x="0.0" y="122" width="320" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="TnG-6O-ejb" id="fcM-x9-r4Y"/>
+                                            <outlet property="delegate" destination="TnG-6O-ejb" id="C8z-LI-SAk"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3m-nN-ncO">
+                                        <rect key="frame" x="133" y="338" width="54" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Animar"/>
+                                        <connections>
+                                            <action selector="animar:" destination="TnG-6O-ejb" eventType="touchUpInside" id="jr4-Se-Nlx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5dH-gw-Gr8" firstAttribute="centerX" secondItem="sXY-Ej-NlK" secondAttribute="centerX" id="fTp-Dc-lCU"/>
+                            <constraint firstItem="5dH-gw-Gr8" firstAttribute="centerY" secondItem="sXY-Ej-NlK" secondAttribute="centerY" id="lhb-Th-jPD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kn6-jO-n6a"/>
+                    </view>
+                    <connections>
+                        <outlet property="comboAnimacoes" destination="KGY-LW-7zD" id="XpU-Je-hyo"/>
+                        <outlet property="logoApple" destination="2fu-MM-iYn" id="W9g-GA-1ON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61O-T3-S8W" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="100" height="122"/>
+    </resources>
+</document>
