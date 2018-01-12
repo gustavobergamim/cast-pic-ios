@@ -10,38 +10,179 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Música-->
         <scene sceneID="QxB-fz-Atz">
             <objects>
-                <viewController id="CaP-AD-ow6" sceneMemberID="viewController">
+                <viewController id="CaP-AD-ow6" customClass="CGAudioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gX8-7I-M7B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-7O-rsl">
+                                <rect key="frame" x="16" y="20" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hg5-wB-amh">
+                                <rect key="frame" x="16" y="49" width="94" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playMusic:" destination="CaP-AD-ow6" eventType="touchUpInside" id="5FN-Qe-lXy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqt-QW-zGc">
+                                <rect key="frame" x="118" y="49" width="93.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="CaP-AD-ow6" eventType="touchUpInside" id="A1C-A7-UKv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-iz-aHd">
+                                <rect key="frame" x="220" y="49" width="93.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopMusic:" destination="CaP-AD-ow6" eventType="touchUpInside" id="cFz-9Y-ol8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-R3-gst">
+                                <rect key="frame" x="16" y="145" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y11-z5-fVi">
+                                <rect key="frame" x="16" y="174" width="94" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Record" image="microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="CaP-AD-ow6" eventType="touchUpInside" id="BFG-1R-pUN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IN-wF-0zn">
+                                <rect key="frame" x="16" y="216" width="94" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="CaP-AD-ow6" eventType="touchUpInside" id="NfW-r3-P3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U04-MB-9NL">
+                                <rect key="frame" x="118" y="216" width="93.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseAudio:" destination="CaP-AD-ow6" eventType="touchUpInside" id="gJf-WG-m4X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQI-Z7-eLi">
+                                <rect key="frame" x="220" y="216" width="93.5" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDF-i5-hB5">
+                                <rect key="frame" x="118" y="174" width="196" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopAudioRecording:" destination="CaP-AD-ow6" eventType="touchUpInside" id="FpS-7a-faD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="f76-7J-EI4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Música" image="musical_notes" id="jnv-fO-8lW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MN0-Zf-f5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="430"/>
+            <point key="canvasLocation" x="1764" y="429.53523238380814"/>
         </scene>
         <!--Vídeo-->
         <scene sceneID="neJ-Ci-Ps6">
             <objects>
-                <viewController id="ZYt-Fy-D2L" sceneMemberID="viewController">
+                <viewController id="ZYt-Fy-D2L" customClass="CGVideoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OoE-WW-wYM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS8-Po-aum">
+                                <rect key="frame" x="0.0" y="568" width="187.5" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xrs-4e-aOM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Play/Pause"/>
+                                <connections>
+                                    <action selector="escolherFoto:" destination="Ki3-CC-6gj" eventType="touchUpInside" id="7gB-Mt-MiI"/>
+                                    <action selector="playPause:" destination="ZYt-Fy-D2L" eventType="touchUpInside" id="qgf-8W-gc1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9s-kf-vP1">
+                                <rect key="frame" x="187" y="568" width="187.5" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hzi-7Q-BYk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="capturarImagem:" destination="Ki3-CC-6gj" eventType="touchUpInside" id="UGN-OG-g20"/>
+                                    <action selector="stop:" destination="ZYt-Fy-D2L" eventType="touchUpInside" id="IkE-Rs-UPT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-32-7zU">
+                                <rect key="frame" x="16" y="20" width="343" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hS8-Po-aum" firstAttribute="top" secondItem="dFz-32-7zU" secondAttribute="bottom" constant="16" id="6LM-la-16X"/>
+                            <constraint firstItem="aAQ-av-Cq9" firstAttribute="trailing" secondItem="dFz-32-7zU" secondAttribute="trailing" constant="16" id="6Sg-cC-xSF"/>
+                            <constraint firstItem="aAQ-av-Cq9" firstAttribute="trailing" secondItem="j9s-kf-vP1" secondAttribute="trailing" id="8sQ-e6-baR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hS8-Po-aum" secondAttribute="trailing" constant="20" symbolic="YES" id="EEB-J8-4wR"/>
+                            <constraint firstItem="j9s-kf-vP1" firstAttribute="bottom" secondItem="aAQ-av-Cq9" secondAttribute="bottom" id="Gmg-jA-0aG"/>
+                            <constraint firstItem="hS8-Po-aum" firstAttribute="bottom" secondItem="aAQ-av-Cq9" secondAttribute="bottom" id="HRc-b3-lNM"/>
+                            <constraint firstItem="hS8-Po-aum" firstAttribute="width" secondItem="OoE-WW-wYM" secondAttribute="width" multiplier="0.5" id="J21-6b-cVU"/>
+                            <constraint firstItem="j9s-kf-vP1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OoE-WW-wYM" secondAttribute="leading" constant="20" symbolic="YES" id="Nub-bV-gHK"/>
+                            <constraint firstItem="hS8-Po-aum" firstAttribute="leading" secondItem="OoE-WW-wYM" secondAttribute="leading" id="TjJ-42-A5Y"/>
+                            <constraint firstItem="dFz-32-7zU" firstAttribute="top" secondItem="aAQ-av-Cq9" secondAttribute="top" id="XGb-YX-eMC"/>
+                            <constraint firstItem="dFz-32-7zU" firstAttribute="leading" secondItem="aAQ-av-Cq9" secondAttribute="leading" constant="16" id="gSf-jE-bSI"/>
+                            <constraint firstItem="j9s-kf-vP1" firstAttribute="width" secondItem="OoE-WW-wYM" secondAttribute="width" multiplier="0.5" id="j2K-2n-9TC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aAQ-av-Cq9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Vídeo" image="Movie" id="8Fh-xV-f5R"/>
+                    <connections>
+                        <outlet property="videoView" destination="dFz-32-7zU" id="l71-Y7-dOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="059-tg-bWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="1209"/>
+            <point key="canvasLocation" x="1764" y="1208.5457271364319"/>
         </scene>
         <!--Câmera-->
         <scene sceneID="Vwa-NN-AOJ">
@@ -130,6 +271,7 @@
     <resources>
         <image name="Movie" width="30" height="30"/>
         <image name="camera" width="30" height="30"/>
+        <image name="microphone" width="30" height="30"/>
         <image name="musical_notes" width="30" height="30"/>
     </resources>
 </document>

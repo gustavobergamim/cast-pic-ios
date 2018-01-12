@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090574FC2006E77600F6D088 /* CGVideoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09823F35200557030081E022 /* CGVideoUtils.m */; };
+		090574FD2006E78D00F6D088 /* bugatti_veyron.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 09823F39200564C20081E022 /* bugatti_veyron.mp4 */; };
+		09823F28200541680081E022 /* CGSoundUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09823F27200541680081E022 /* CGSoundUtils.m */; };
+		09823F2B200547480081E022 /* CGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09823F2A200547480081E022 /* CGAudioViewController.m */; };
+		09823F2D200548180081E022 /* thai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 09823F2C200548180081E022 /* thai.mp3 */; };
+		09823F3020054C890081E022 /* CGSoundRecordUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 09823F2F20054C890081E022 /* CGSoundRecordUtils.m */; };
+		09823F33200556F40081E022 /* CGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09823F32200556F40081E022 /* CGVideoViewController.m */; };
 		09E6388F20040B9400D371E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6388E20040B9400D371E5 /* AppDelegate.m */; };
 		09E6389220040B9400D371E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E6389120040B9400D371E5 /* ViewController.m */; };
 		09E6389520040B9400D371E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E6389320040B9400D371E5 /* Main.storyboard */; };
@@ -17,6 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09823F26200541680081E022 /* CGSoundUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGSoundUtils.h; sourceTree = "<group>"; };
+		09823F27200541680081E022 /* CGSoundUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGSoundUtils.m; sourceTree = "<group>"; };
+		09823F29200547480081E022 /* CGAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGAudioViewController.h; sourceTree = "<group>"; };
+		09823F2A200547480081E022 /* CGAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGAudioViewController.m; sourceTree = "<group>"; };
+		09823F2C200548180081E022 /* thai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thai.mp3; sourceTree = "<group>"; };
+		09823F2E20054C890081E022 /* CGSoundRecordUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGSoundRecordUtils.h; sourceTree = "<group>"; };
+		09823F2F20054C890081E022 /* CGSoundRecordUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGSoundRecordUtils.m; sourceTree = "<group>"; };
+		09823F31200556F40081E022 /* CGVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGVideoViewController.h; sourceTree = "<group>"; };
+		09823F32200556F40081E022 /* CGVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGVideoViewController.m; sourceTree = "<group>"; };
+		09823F34200557030081E022 /* CGVideoUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGVideoUtils.h; sourceTree = "<group>"; };
+		09823F35200557030081E022 /* CGVideoUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGVideoUtils.m; sourceTree = "<group>"; };
+		09823F39200564C20081E022 /* bugatti_veyron.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bugatti_veyron.mp4; sourceTree = "<group>"; };
 		09E6388A20040B9400D371E5 /* multimedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multimedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E6388D20040B9400D371E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		09E6388E20040B9400D371E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +80,8 @@
 		09E6388C20040B9400D371E5 /* multimedia */ = {
 			isa = PBXGroup;
 			children = (
+				09823F39200564C20081E022 /* bugatti_veyron.mp4 */,
+				09823F2C200548180081E022 /* thai.mp3 */,
 				09E6388D20040B9400D371E5 /* AppDelegate.h */,
 				09E6388E20040B9400D371E5 /* AppDelegate.m */,
 				09E6389020040B9400D371E5 /* ViewController.h */,
@@ -72,6 +93,16 @@
 				09E6389C20040B9400D371E5 /* main.m */,
 				09E638A3200410CC00D371E5 /* CGCameraViewController.h */,
 				09E638A4200410CC00D371E5 /* CGCameraViewController.m */,
+				09823F26200541680081E022 /* CGSoundUtils.h */,
+				09823F27200541680081E022 /* CGSoundUtils.m */,
+				09823F29200547480081E022 /* CGAudioViewController.h */,
+				09823F2A200547480081E022 /* CGAudioViewController.m */,
+				09823F2E20054C890081E022 /* CGSoundRecordUtils.h */,
+				09823F2F20054C890081E022 /* CGSoundRecordUtils.m */,
+				09823F31200556F40081E022 /* CGVideoViewController.h */,
+				09823F32200556F40081E022 /* CGVideoViewController.m */,
+				09823F34200557030081E022 /* CGVideoUtils.h */,
+				09823F35200557030081E022 /* CGVideoUtils.m */,
 			);
 			path = multimedia;
 			sourceTree = "<group>";
@@ -135,7 +166,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09823F2D200548180081E022 /* thai.mp3 in Resources */,
 				09E6389A20040B9400D371E5 /* LaunchScreen.storyboard in Resources */,
+				090574FD2006E78D00F6D088 /* bugatti_veyron.mp4 in Resources */,
 				09E6389720040B9400D371E5 /* Assets.xcassets in Resources */,
 				09E6389520040B9400D371E5 /* Main.storyboard in Resources */,
 			);
@@ -149,8 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E6389220040B9400D371E5 /* ViewController.m in Sources */,
+				090574FC2006E77600F6D088 /* CGVideoUtils.m in Sources */,
+				09823F3020054C890081E022 /* CGSoundRecordUtils.m in Sources */,
+				09823F33200556F40081E022 /* CGVideoViewController.m in Sources */,
+				09823F2B200547480081E022 /* CGAudioViewController.m in Sources */,
 				09E638A5200410CC00D371E5 /* CGCameraViewController.m in Sources */,
 				09E6389D20040B9400D371E5 /* main.m in Sources */,
+				09823F28200541680081E022 /* CGSoundUtils.m in Sources */,
 				09E6388F20040B9400D371E5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
