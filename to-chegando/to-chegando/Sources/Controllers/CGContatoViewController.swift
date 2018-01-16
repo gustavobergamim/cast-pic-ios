@@ -35,6 +35,10 @@ class CGContatoViewController: UIViewController, UINavigationControllerDelegate,
         super.didReceiveMemoryWarning()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        resignFirstResponder();
+    }
+    
     @IBAction func escolherImagem(_ sender: UIButton)
     {
         self.present(self.imagePickerController, animated: true, completion: nil);

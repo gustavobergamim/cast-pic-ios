@@ -30,11 +30,16 @@ class CGLoginService {
         return request;
     }
     
-    func validarUsuario(numeroTelefone : String, _ sucesso: @escaping () -> Void, _ falha : @escaping () -> Void)
+    func validarUsuario(numeroTelefone : String, _ sucesso: @escaping () -> Void, _ falha : @escaping (String) -> Void)
     {
+        if (numeroTelefone.count == 0)
+        {
+            falha("Por favor, informe seu número de telefone.");
+            return;
+        }
         if (numeroTelefone.starts(with: "11"))
         {
-            falha();
+            falha("Este número de telefone não existe.");
             return;
         }
         let urlRequest = self.criarUrlRequest();
@@ -53,7 +58,7 @@ class CGLoginService {
                     }
                 }
             }
-            falha();
+            falha("Ocorreu um erro ao validar o número de telefone.");
         });
         
         dataTask.resume()

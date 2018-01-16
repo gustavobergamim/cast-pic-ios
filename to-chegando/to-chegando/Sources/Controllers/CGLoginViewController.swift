@@ -61,10 +61,10 @@ class CGLoginViewController: UIViewController {
         }
     }
     
-    private func processarFalha()
+    private func processarFalha(mensagem: String)
     {
         self.finalizarProcessamento();
-        CGAlertaController(exibirErro: "Este número de telefone não existe.").exibir(self);
+        CGAlertaController(exibirErro: mensagem).exibir(self);
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
