@@ -74,10 +74,18 @@ var numeros = [6, 4, 1, 2, 7, 8];
 numeros.sort(by: >);
 numeros.sort(by: <);
 
-var nomes = [ "   Urso", "  Urso Glini", "Pouta Que La Ursa" ];
+var nomes = [ "   Urso", "  Urso Glini", "Pouta Que La Ursa", "Berga" ];
 let nomesSemEspaco = nomes.map(){ $0.trimmingCharacters(in: CharacterSet.whitespaces) };
 print(nomesSemEspaco);
 
 let nomesUpperCased = nomesSemEspaco.map(){ $0.uppercased() };
 print(nomesUpperCased);
+
+let filtrado = nomesSemEspaco.filter(){ $0.uppercased() == "BERGA" };
+print(filtrado);
+
+
+//Reduce
+let somaCaracteres = nomes.reduce(0, { $0 + $1.characters.count });
+print(somaCaracteres);
 

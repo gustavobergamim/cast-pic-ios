@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialBold.ttf">
+            <string>Arial-BoldMT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="su1-dK-2Qa">
+            <objects>
+                <viewController storyboardIdentifier="formLogin" modalPresentationStyle="overCurrentContext" id="tLa-Lc-MlB" customClass="CGLoginViewController" customModule="to_chegando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H6Y-rQ-oqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(00) 00000-0000" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-Nb-aRq" customClass="CGLoginTextField" customModule="to_chegando" customModuleProvider="target">
+                                <rect key="frame" x="16" y="124" width="243" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="q0X-uG-j9p"/>
+                                </constraints>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeB-cu-c6M">
+                                <rect key="frame" x="259" y="124" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fLo-zE-yhq"/>
+                                    <constraint firstAttribute="height" constant="50" id="ikt-Gf-J9k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="25"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="autenticar:" destination="tLa-Lc-MlB" eventType="touchUpInside" id="cqP-AW-EAb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informe seu número de telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-25-A8v">
+                                <rect key="frame" x="16" y="66" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UCv-EX-W0G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-5K-Xit">
+                                <rect key="frame" x="329" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Hep-Kv-t6C"/>
+                                    <constraint firstAttribute="height" constant="30" id="nWH-W4-VPc"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="cancel">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelar:" destination="tLa-Lc-MlB" eventType="touchUpInside" id="2Hi-wa-Zz8"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="neI-9Y-fGP">
+                                <rect key="frame" x="291" y="131" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bYM-MH-IWR" firstAttribute="trailing" secondItem="pQK-5K-Xit" secondAttribute="trailing" constant="16" id="FCY-kV-3JO"/>
+                            <constraint firstItem="NeB-cu-c6M" firstAttribute="leading" secondItem="1WQ-Nb-aRq" secondAttribute="trailing" id="OfZ-LL-mFX"/>
+                            <constraint firstItem="1c7-25-A8v" firstAttribute="leading" secondItem="bYM-MH-IWR" secondAttribute="leading" constant="16" id="SQW-B7-Smg"/>
+                            <constraint firstItem="pQK-5K-Xit" firstAttribute="top" secondItem="bYM-MH-IWR" secondAttribute="top" id="a1b-ya-ONF"/>
+                            <constraint firstItem="1c7-25-A8v" firstAttribute="top" secondItem="pQK-5K-Xit" secondAttribute="bottom" constant="16" id="dAI-2t-kCg"/>
+                            <constraint firstItem="1WQ-Nb-aRq" firstAttribute="top" secondItem="1c7-25-A8v" secondAttribute="bottom" constant="8" id="svA-5I-Oqk"/>
+                            <constraint firstItem="bYM-MH-IWR" firstAttribute="trailing" secondItem="1c7-25-A8v" secondAttribute="trailing" constant="16" id="u8k-8V-5iR"/>
+                            <constraint firstItem="bYM-MH-IWR" firstAttribute="trailing" secondItem="NeB-cu-c6M" secondAttribute="trailing" constant="16" id="uwZ-Ks-Znz"/>
+                            <constraint firstItem="1WQ-Nb-aRq" firstAttribute="leading" secondItem="bYM-MH-IWR" secondAttribute="leading" constant="16" id="xqc-BR-WwD"/>
+                            <constraint firstItem="NeB-cu-c6M" firstAttribute="top" secondItem="1c7-25-A8v" secondAttribute="bottom" constant="8" id="yg8-g8-LPY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bYM-MH-IWR"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="neI-9Y-fGP" id="mT4-ht-9OD"/>
+                        <outlet property="buttonEntrar" destination="NeB-cu-c6M" id="sXk-47-VGj"/>
+                        <outlet property="textNumeroTelefone" destination="1WQ-Nb-aRq" id="oQU-GE-YRK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPZ-iV-US8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cancel" width="30" height="30"/>
+    </resources>
+</document>

@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="T7J-et-auS">
             <objects>
-                <viewController storyboardIdentifier="listView" modalPresentationStyle="currentContext" id="UTi-QE-UOO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listView" modalPresentationStyle="overCurrentContext" id="UTi-QE-UOO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ie8-Lo-PUT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
