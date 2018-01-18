@@ -14,6 +14,14 @@ class CGAppConfig: NSObject {
     {
         get
         {
+            return getConfigValue(key: "url_api");
+        }
+    }
+    
+    var urlApiTeste : String
+    {
+        get
+        {
             return getConfigValue(key: "url_api_teste");
         }
     }

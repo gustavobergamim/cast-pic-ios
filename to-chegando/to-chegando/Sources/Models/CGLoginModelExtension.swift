@@ -6,9 +6,10 @@
 //  Copyright © 2018 Cast Group. All rights reserved.
 //
 
-import UIKit
+import UIKit;
 
-extension CGLoginModel {
+extension CGLoginModel
+{
     
     convenience init?(_ json: [String: Any])
     {
@@ -20,5 +21,4 @@ extension CGLoginModel {
         self.init();
         self.isValido = isValido;
     }
-    
 }

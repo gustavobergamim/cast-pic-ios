@@ -14,9 +14,6 @@ class CGContatoTableViewCell: UITableViewCell {
     @IBOutlet weak var labelNome: UILabel!;
     @IBOutlet weak var labelTelefone: UILabel!;
     
-    private let colorAqua = UIColor(red: 0.0, green: 150.0/255.0, blue: 255.0/255.0, alpha: 1.0);
-    private let colorOcean = UIColor(red: 0.0, green: 84.0/255.0, blue: 147.0/255.0, alpha: 1.0);
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -36,7 +33,7 @@ class CGContatoTableViewCell: UITableViewCell {
     private func definirCores(_ indice: Int)
     {
         let isPar = indice % 2 == 0;
-        self.contentView.backgroundColor = isPar ? self.colorAqua : self.colorOcean;
-        self.labelTelefone.textColor = isPar ? self.colorOcean : self.colorAqua;
+        self.contentView.backgroundColor = isPar ? CGConstantes.colorAqua : CGConstantes.colorOcean;
+        self.labelTelefone.textColor = isPar ? CGConstantes.colorOcean : CGConstantes.colorAqua;
     }
 }

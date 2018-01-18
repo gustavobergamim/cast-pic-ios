@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0912C1E12011429600329953 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E02011429600329953 /* DateExtension.swift */; };
+		0912C1E3201148B900329953 /* CGConstantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E2201148B900329953 /* CGConstantes.swift */; };
+		094FA37D200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */; };
+		094FA37F2010370E00204CC3 /* CGLocalizacaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA37E2010370E00204CC3 /* CGLocalizacaoService.swift */; };
+		094FA381201037A500204CC3 /* CGLocalizacaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA380201037A500204CC3 /* CGLocalizacaoModel.swift */; };
+		094FA383201038F400204CC3 /* CGLocalizacaoModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA382201038F400204CC3 /* CGLocalizacaoModelExtension.swift */; };
 		09871370200C17CC00FAD757 /* Formularios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0987136F200C17CC00FAD757 /* Formularios.storyboard */; };
 		09871375200C237C00FAD757 /* CGLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871374200C237C00FAD757 /* CGLoginTextField.swift */; };
 		0987137A200C293500FAD757 /* CGLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871379200C293500FAD757 /* CGLoginViewController.swift */; };
@@ -34,6 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0912C1E02011429600329953 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		0912C1E2201148B900329953 /* CGConstantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGConstantes.swift; sourceTree = "<group>"; };
+		094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGEnvioLocalizacaoViewController.swift; sourceTree = "<group>"; };
+		094FA37E2010370E00204CC3 /* CGLocalizacaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLocalizacaoService.swift; sourceTree = "<group>"; };
+		094FA380201037A500204CC3 /* CGLocalizacaoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLocalizacaoModel.swift; sourceTree = "<group>"; };
+		094FA382201038F400204CC3 /* CGLocalizacaoModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLocalizacaoModelExtension.swift; sourceTree = "<group>"; };
 		0987136F200C17CC00FAD757 /* Formularios.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Formularios.storyboard; sourceTree = "<group>"; };
 		09871374200C237C00FAD757 /* CGLoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLoginTextField.swift; sourceTree = "<group>"; };
 		09871379200C293500FAD757 /* CGLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +130,8 @@
 			children = (
 				09FC4ED22009135900E0A66C /* AppDelegate.swift */,
 				0987137E200C31A800FAD757 /* CGAppConfig.swift */,
+				0912C1E02011429600329953 /* DateExtension.swift */,
+				0912C1E2201148B900329953 /* CGConstantes.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -130,6 +144,7 @@
 				09C4DCDE200D0256007223CC /* CGHomeViewController.swift */,
 				09C4DCF2200D77F7007223CC /* CGContatoViewController.swift */,
 				09C4DCFE200D93A1007223CC /* CGAlertaController.swift */,
+				094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -148,6 +163,7 @@
 			children = (
 				09871381200C339F00FAD757 /* CGLoginService.swift */,
 				09C4DCFC200D82B5007223CC /* CGContatoService.swift */,
+				094FA37E2010370E00204CC3 /* CGLocalizacaoService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -167,6 +183,8 @@
 				09C4DCE6200D50A8007223CC /* CGLoginModelExtension.swift */,
 				09C4DCE8200D5B80007223CC /* CGContatoModel.swift */,
 				09C4DCFA200D7F42007223CC /* CGContatoModelExtension.swift */,
+				094FA380201037A500204CC3 /* CGLocalizacaoModel.swift */,
+				094FA382201038F400204CC3 /* CGLocalizacaoModelExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0987137A200C293500FAD757 /* CGLoginViewController.swift in Sources */,
+				0912C1E3201148B900329953 /* CGConstantes.swift in Sources */,
+				094FA383201038F400204CC3 /* CGLocalizacaoModelExtension.swift in Sources */,
 				09C4DCE9200D5B80007223CC /* CGContatoModel.swift in Sources */,
 				09FC4ED32009135900E0A66C /* AppDelegate.swift in Sources */,
 				09C4DCF9200D7F00007223CC /* CGContatoDAO.swift in Sources */,
@@ -345,11 +365,15 @@
 				09C4DCEF200D5E8A007223CC /* CGContatoTableViewController.swift in Sources */,
 				09871375200C237C00FAD757 /* CGLoginTextField.swift in Sources */,
 				09C4DCFB200D7F42007223CC /* CGContatoModelExtension.swift in Sources */,
+				0912C1E12011429600329953 /* DateExtension.swift in Sources */,
 				09C4DCF7200D7E0F007223CC /* CGCoreDataContext.swift in Sources */,
 				09C4DCFF200D93A1007223CC /* CGAlertaController.swift in Sources */,
+				094FA381201037A500204CC3 /* CGLocalizacaoModel.swift in Sources */,
 				09C4DCE1200D028B007223CC /* CGLoginDelegate.swift in Sources */,
+				094FA37F2010370E00204CC3 /* CGLocalizacaoService.swift in Sources */,
 				09C4DCDF200D0256007223CC /* CGHomeViewController.swift in Sources */,
 				09C4DCE7200D50A8007223CC /* CGLoginModelExtension.swift in Sources */,
+				094FA37D200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift in Sources */,
 				09C4DCFD200D82B5007223CC /* CGContatoService.swift in Sources */,
 				09C4DCE5200D505E007223CC /* CGLoginModel.swift in Sources */,
 			);
