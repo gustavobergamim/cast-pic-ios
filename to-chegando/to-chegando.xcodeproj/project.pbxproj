@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0912C1E12011429600329953 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E02011429600329953 /* DateExtension.swift */; };
 		0912C1E3201148B900329953 /* CGConstantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E2201148B900329953 /* CGConstantes.swift */; };
+		0912C1E52011580400329953 /* CGVisualizarLocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E42011580400329953 /* CGVisualizarLocalizacaoViewController.swift */; };
+		0912C1E820115E4100329953 /* CGContatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912C1E720115E4100329953 /* CGContatoView.swift */; };
 		094FA37D200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */; };
 		094FA37F2010370E00204CC3 /* CGLocalizacaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA37E2010370E00204CC3 /* CGLocalizacaoService.swift */; };
 		094FA381201037A500204CC3 /* CGLocalizacaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094FA380201037A500204CC3 /* CGLocalizacaoModel.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		0912C1E02011429600329953 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		0912C1E2201148B900329953 /* CGConstantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGConstantes.swift; sourceTree = "<group>"; };
+		0912C1E42011580400329953 /* CGVisualizarLocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGVisualizarLocalizacaoViewController.swift; sourceTree = "<group>"; };
+		0912C1E720115E4100329953 /* CGContatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGContatoView.swift; sourceTree = "<group>"; };
 		094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGEnvioLocalizacaoViewController.swift; sourceTree = "<group>"; };
 		094FA37E2010370E00204CC3 /* CGLocalizacaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLocalizacaoService.swift; sourceTree = "<group>"; };
 		094FA380201037A500204CC3 /* CGLocalizacaoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGLocalizacaoModel.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0912C1E620115E2000329953 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0912C1E720115E4100329953 /* CGContatoView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		09871371200C22FE00FAD757 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 		09871376200C28F100FAD757 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0912C1E620115E2000329953 /* Protocols */,
 				09C4DCF4200D7DF1007223CC /* Dao */,
 				09C4DCE3200D5045007223CC /* Models */,
 				09C4DCE2200D4FAF007223CC /* Delegates */,
@@ -145,6 +158,7 @@
 				09C4DCF2200D77F7007223CC /* CGContatoViewController.swift */,
 				09C4DCFE200D93A1007223CC /* CGAlertaController.swift */,
 				094FA37C200EB98800204CC3 /* CGEnvioLocalizacaoViewController.swift */,
+				0912C1E42011580400329953 /* CGVisualizarLocalizacaoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 				09FC4ED32009135900E0A66C /* AppDelegate.swift in Sources */,
 				09C4DCF9200D7F00007223CC /* CGContatoDAO.swift in Sources */,
 				09C4DCF3200D77F7007223CC /* CGContatoViewController.swift in Sources */,
+				0912C1E52011580400329953 /* CGVisualizarLocalizacaoViewController.swift in Sources */,
 				09C4DCED200D5CC3007223CC /* CGContatoTableViewCell.swift in Sources */,
 				0987137F200C31A800FAD757 /* CGAppConfig.swift in Sources */,
 				09FC4EDB2009135900E0A66C /* to_chegando.xcdatamodeld in Sources */,
@@ -368,6 +383,7 @@
 				0912C1E12011429600329953 /* DateExtension.swift in Sources */,
 				09C4DCF7200D7E0F007223CC /* CGCoreDataContext.swift in Sources */,
 				09C4DCFF200D93A1007223CC /* CGAlertaController.swift in Sources */,
+				0912C1E820115E4100329953 /* CGContatoView.swift in Sources */,
 				094FA381201037A500204CC3 /* CGLocalizacaoModel.swift in Sources */,
 				09C4DCE1200D028B007223CC /* CGLoginDelegate.swift in Sources */,
 				094FA37F2010370E00204CC3 /* CGLocalizacaoService.swift in Sources */,

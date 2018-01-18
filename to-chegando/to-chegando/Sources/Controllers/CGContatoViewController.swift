@@ -9,8 +9,8 @@
 import UIKit;
 import Photos;
 
-class CGContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+class CGContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CGContatoView
+{
     @IBOutlet weak var imagem: UIImageView!;
     @IBOutlet weak var textNome: UITextField!;
     @IBOutlet weak var textContato: UITextField!;

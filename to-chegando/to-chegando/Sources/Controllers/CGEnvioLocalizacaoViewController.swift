@@ -15,8 +15,6 @@ class CGEnvioLocalizacaoViewController: UIViewController, UIPickerViewDelegate, 
     @IBOutlet weak var mapa: MKMapView!;
     @IBOutlet weak var botaoEnviar: UIButton!
     
-    private let SegueId = "visualizarLocalizacao";
-    
     private (set) var contatos: [CGContatoModel] = [];
     private (set) var locationManager: CLLocationManager?;
     var contatoSelecionado: CGContatoModel?;
@@ -127,7 +125,7 @@ class CGEnvioLocalizacaoViewController: UIViewController, UIPickerViewDelegate, 
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
     {
-        if (identifier == self.SegueId)
+        if (identifier == CGConstantes.segueConfirmarLocalizacao)
         {
             return self.pickerContato.selectedRow(inComponent: 0) >= 0;
         }
@@ -135,7 +133,7 @@ class CGEnvioLocalizacaoViewController: UIViewController, UIPickerViewDelegate, 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if (segue.identifier == self.SegueId)
+        if (segue.identifier == CGConstantes.segueConfirmarLocalizacao)
         {
             let controller = segue.destination as? CGEnvioLocalizacaoViewController;
             let selectedRowIndex = self.pickerContato.selectedRow(inComponent: 0);

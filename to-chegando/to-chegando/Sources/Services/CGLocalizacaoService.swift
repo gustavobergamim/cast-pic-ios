@@ -12,7 +12,7 @@ import Foundation;
 class CGLocalizacaoService
 {
     private let config = CGAppConfig();
-    private let apiUrl : URL;
+    private let apiUrl : String;
     private let requestHeaders = [
         "Content-Type": "application/json",
         "Cache-Control": "no-cache"
@@ -20,12 +20,13 @@ class CGLocalizacaoService
     
     init()
     {
-        self.apiUrl = NSURL(string: self.config.urlApi)! as URL;
+        self.apiUrl = self.config.urlApi;
     }
     
-    private func criarUrlRequest(method: String = "GET") -> NSMutableURLRequest
+    private func criarUrlRequest(method: String = "GET", suffix: String = "") -> NSMutableURLRequest
     {
-        let request = NSMutableURLRequest(url: self.apiUrl,
+        let url  = NSURL(string: self.apiUrl + suffix) as! URL;
+        let request = NSMutableURLRequest(url: url,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0);
         request.httpMethod = method;
@@ -45,6 +46,26 @@ class CGLocalizacaoService
                 return;
             }
             falha("Ocorreu um erro ao salvar a localização: \(error?.localizedDescription ?? "")");
+        })
+        
+        dataTask.resume();
+    }
+    
+    func obterLocalizacao(_ numeroTelefoneContato: String, _ sucesso: @escaping (CGLocalizacaoModel?) -> Void, _ falha : @escaping (String) -> Void)
+    {
+        let numeroTelefoneOrigem = UserDefaults().string(forKey: CGConstantes.keyLogin)!;
+        let request = self.criarUrlRequest(method: "GET", suffix: "/\(numeroTelefoneOrigem)/\(numeroTelefoneContato)");
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error == nil) {
+                if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                {
+                    sucesso(CGLocalizacaoModel.init(json!));
+                    return;
+                }
+            }
+            falha("Ocorreu um erro ao obter a localização: \(error?.localizedDescription ?? "")");
         })
         
         dataTask.resume()

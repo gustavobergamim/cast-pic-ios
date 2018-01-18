@@ -11,6 +11,7 @@ import UIKit
 class CGContatoTableViewController: UITableViewController {
 
     var contatos: [CGContatoModel] = [];
+    var contatoSelecionado: CGContatoModel?;
     
     override func viewDidLoad()
     {
@@ -84,6 +85,12 @@ class CGContatoTableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
+    {
+        self.contatoSelecionado = self.contatos[indexPath.row];
+        self.performSegue(withIdentifier: CGConstantes.segueVisualizarLocalizacao, sender: self);
+    }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -103,30 +110,40 @@ class CGContatoTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if (identifier == "editarContato")
+        switch identifier
         {
-            let isSelecionado = self.tableView!.indexPathForSelectedRow != nil
-                && self.tableView!.indexPathForSelectedRow!.count > 0;
-            if (!isSelecionado)
-            {
-                CGAlertaController(exibirErro: "Selecione um contato para edição.").exibir(self);
-            }
-            return isSelecionado;
+            case CGConstantes.segueEditarContato:
+                let isSelecionado = self.tableView!.indexPathForSelectedRow != nil
+                    && self.tableView!.indexPathForSelectedRow!.count > 0;
+                if (!isSelecionado)
+                {
+                    CGAlertaController(exibirErro: "Selecione um contato para edição.").exibir(self);
+                }
+                return isSelecionado;
+            case CGConstantes.segueVisualizarLocalizacao:
+                return self.contatoSelecionado != nil;
+            default:
+                return true;
         }
-        return true;
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "editarContato")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        var contato: CGContatoModel? = nil;
+        if let rowIndex = self.tableView.indexPathForSelectedRow?.last
         {
-            let rowIndex = self.tableView.indexPathForSelectedRow!.last!;
-            let contato = self.contatos[rowIndex];
-            let controller = segue.destination as? CGContatoViewController;
-            controller!.contato = contato;
+            contato = self.contatos[rowIndex];
+        }
+        else if self.contatoSelecionado != nil
+        {
+            contato = self.contatoSelecionado!;
+            self.contatoSelecionado = nil;
+        }
+        if (contato != nil)
+        {
+            var controller = segue.destination as? CGContatoView;
+            controller!.contato = contato!;
         }
     }
-
-    
-
 }
