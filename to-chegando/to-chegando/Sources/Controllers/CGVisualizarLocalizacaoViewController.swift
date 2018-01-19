@@ -28,16 +28,22 @@ class CGVisualizarLocalizacaoViewController: UIViewController, MKMapViewDelegate
     override func viewWillAppear(_ animated: Bool)
     {
         let service = CGLocalizacaoService();
-        service.obterLocalizacao((self.contato?.telefone)!, { (localizacao: CGLocalizacaoModel?) in
-            if let unwrapped = localizacao
+        DispatchQueue.global(qos: .background).async {
+            while (!self.view.isHidden)
             {
-                DispatchQueue.main.async
-                {
-                    self.adicionarMarcacao(CLLocationCoordinate2D(latitude: unwrapped.latitude, longitude: unwrapped.longitude))
-                }
+                service.obterLocalizacao((self.contato?.telefone)!, { (localizacao: CGLocalizacaoModel?) in
+                    if let unwrapped = localizacao
+                    {
+                        DispatchQueue.main.async
+                        {
+                            self.adicionarMarcacao(CLLocationCoordinate2D(latitude: unwrapped.latitude, longitude: unwrapped.longitude))
+                        }
+                    }
+                }, { (mensagem: String) in
+                    CGAlertaController(exibirErro: mensagem).exibir(self);
+                });
+                sleep(5);
             }
-        }) { (mensagem: String) in
-            CGAlertaController(exibirErro: mensagem).exibir(self);
         }
     }
     

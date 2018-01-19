@@ -3,6 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>url_api</key>
+	<string>http://cast-pic-ios-api.azurewebsites.net/api/localizacao</string>
+	<key>url_api_local</key>
 	<string>http://localhost:5000/api/localizacao</string>
 	<key>url_api_teste</key>
 	<string>https://api.myjson.com/bins/1fxx9p</string>

@@ -53,8 +53,8 @@ class CGLocalizacaoService
     
     func obterLocalizacao(_ numeroTelefoneContato: String, _ sucesso: @escaping (CGLocalizacaoModel?) -> Void, _ falha : @escaping (String) -> Void)
     {
-        let numeroTelefoneOrigem = UserDefaults().string(forKey: CGConstantes.keyLogin)!;
-        let request = self.criarUrlRequest(method: "GET", suffix: "/\(numeroTelefoneOrigem)/\(numeroTelefoneContato)");
+        let numeroTelefoneDestino = UserDefaults().string(forKey: CGConstantes.keyLogin)!;
+        let request = self.criarUrlRequest(method: "GET", suffix: "/\(numeroTelefoneContato)/\(numeroTelefoneDestino)");
         
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
